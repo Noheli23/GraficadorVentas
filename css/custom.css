@@ -1,0 +1,33 @@
+.container img{
+	width: 60px;
+	height: 60px;
+	display: inline;
+}
+
+.container h1{
+	font-size: 60px;
+}
+form label{
+	
+	font-weight:bold;
+	
+}
+.row table, th, td{
+	border: 1px solid #bdbdbd ;
+	text-align:center;
+}
+
+.row table th{
+	color:white;
+	
+	border: 1px solid #bdbdbd ;
+	background-color:#004c8c;
+	
+}
+
+.row table td:first-child{
+	width: 60px;
+}
+.row table td:nth-child(2){
+	width: 80px;
+}

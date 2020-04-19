@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Graficador de ventas</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+	<link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body>
+
+<nav class=" text-white text-center py-3 " style="background-color: #004c8c;">
+ 
+ 	<div class="container">
+ 		<h1>Domino´s</h1>
+ 		<img src="img/1200px-Domino's_pizza_logo.svg.png" alt="">
+ 		</div>
+ 		
+ 	</div>
+ 	
+	
+ 
+</nav>
+
+<br>
+<br>
+
+<div class="container text-center">
+	<h2>Información de ventas</h2>
+</div>
+
+
+<div class="container">
+
+<div class="col-14 col-lg-12 mt-5 mb-5 border shadow p-3 bg-light rounded">
+
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Año:</label>
+    <input type="number" class="form-control" id="año" maxlength="4" oninput="valiNumber(this);">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Periodo de análisis:</label>
+    <select class="form-control" id="periodo" required="required" >
+  <option selected value="0">Seleccionar</option>
+  <option value="12">Mensual</option>
+  <option value="6">Bimestre</option>
+  <option value="4">Trimestre</option>
+  <option value="3">Cuatrimestre</option>
+  <option value="2">Semestral</option>
+</select>
+
+  </div>
+  
+  <div class="form-group text-center">
+    <label for="exampleFormControlTextarea1">Ventas</label>
+    
+  </div>
+
+<div class="container text-center">
+
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Mes</th>
+        <th>Valor</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><input id="m1" type="number"  class="form-control" required="required"  ></td>
+       
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input id="m2" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><input id="m3" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><input id="m4" type="number"  class="form-control" required="required"  ></td>
+       
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><input id="m5" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><input id="m6" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><input id="m7" type="number"  class="form-control" required="required"  ></td>
+       
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><input id="m8" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><input id="m9" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><input id="m10" type="number"  class="form-control" required="required"  ></td>
+       
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><input id="m11" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><input id="m12" type="number"  class="form-control" required="required"  ></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+<div class="container text-center">
+             <br>
+			 <button id="btn" type="button" class="btn text-white" style="background-color:#004c8c ">Analizar datos</button>
+			 </div>
+
+</form>
+
+
+	</div>
+			
+			 
+	 <div class="row">
+
+    <div class="col-10 col-sm-12 col-md-10 col-lg-6 mt-10 mb-10">
+        <div id="top_x_div" ></div>
+      </div>
+        <br>
+
+			  <div class="col-10 col-sm-12 col-md-10 col-lg-6 mt-10 mb-10">
+                <p id="table">
+
+                </p>
+            </div>
+
+        </div>
+      
+      
+      
+        
+</div>
+<br>
+  <footer class="footer  py-2 text-center text-white"style="background-color: #004c8c;">
+
+      <div class="container">
+
+    Copyright © AÑO 2020
+          Autor: Noheli Villa Valencia 
+        |   Cod: 1151997
+        |   Correo: noheliviva@ufps.edu.co
+      <br/>
+        Desarrollo De Aplicaciones Web - 
+        <a href="http://ingsistemas.ufps.edu.co/" target="_blank" style="color:white">Ing.Sistemas</a> - 
+        <a target="_blank" href="http://ufps.edu.co/" style="color:white">UFPS</a>        
+
+
+
+      </div>
+
+  </footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="js/myFuncionMat.js"></script>
+   
+
+</body>
+</html>
